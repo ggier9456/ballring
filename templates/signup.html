@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- 載入babel編譯器套件 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css' )}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/list.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/list.css' )}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/signfooter.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signfooter.css' )}}">
+    <link rel="stylesheet" type="text/css" href="../static/css/signup.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css' )}}">
+    <title>Ballring會員註冊</title>
+    <script type="text/babel">
+        class Search_del extends React.Component{ //此class為刪除搜尋欄中輸入文字的按鈕功能
+            constructor(props){
+                super(props);
+                this.state={
+                    text:""
+                }
+            } 
+            render(){
+                let display='none';
+                if(this.state.text!==""){
+                    display='block'; //將x按鈕在搜尋欄有輸入時顯示出來
+                }
+                return <form action="/search" method="post" className="searchbox">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" name="search_name" placeholder="搜尋" value={this.state.text} onChange={this.getData.bind(this)} className="search"/> 
+                    <div class="search_clear">
+                        <button type="button" aria-hidden="true" className="clear_button" onClick={this.delData.bind(this)} style={
+                            {display:display}
+                        }>X</button>
+                    </div>
+                    </form>; //利用onChange來取得input欄的輸入資料
+            }
+            handleSubmit(e){
+                e.preventDefault();
+                console.log("送出")
+                console.log("name:"+this.state.text)
+            }
+            getData(e){
+                this.setState({text:e.currentTarget.value}); //e為事件物件，為輸入input的資料群
+            }
+            delData(){
+                this.setState({text:""})
+            }
+        }
+        window.addEventListener("load", ()=>{
+            ReactDOM.render(<Search_del/>, document.getElementsByClassName("react1")[0]); //render在class="reacrt1上面"
+         });
+    </script>
+</head>
+<body>
+    <div class="top">
+        <a href="/" class="logo"><img src="../static/pic/logo.png"></a>
+        <div class="member">
+            <a href="/member"><ion-icon name="person-outline"></ion-icon></a>
+        </div>
+        <div class="shopping-car">
+            <a href="/car"><ion-icon name="cart-outline"></ion-icon></a>
+        </div>
+        <div class="react1"></div>
+    </div>
+    <div class="signup-box">
+        <div class="signup">
+            <form action="/signup_form" method="POST" class="input_form">
+                <h2>會員註冊</h2>
+                <div class="inputbox">
+                    <label>使用者名稱:
+                        <input type="text" name="username" placeholder="輸入您的使用者名稱" class="input_content">
+                    </label>
+                </div>
+                <div class="inputbox">
+                    <label>電子郵件:
+                        <input type="email" name="email" placeholder="輸入您的電子郵件" class="input_content">
+                    </label>
+                </div>
+                <div class="inputbox">
+                    <label>密碼:
+                        <input type="password" name="password" placeholder="設定您的密碼" class="input_content">
+                    </label>
+                </div>
+                <div class="inputbox">
+                    <label>確認密碼:
+                        <input type="password" name="password2" placeholder="再次輸入您的密碼" class="input_content">
+                    </label>
+                </div>
+                <div class="buttonbox">
+                    <button class="signup_button">註冊</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_text"><p>Copyright © 2023 Xun-Kai</p></div>
+        <div class="icon">
+            <a href="https://www.facebook.com/profile.php?id=100002405719073"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/gugi_gugi333/"><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+    </footer>
+        
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

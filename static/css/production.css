@@ -1,0 +1,116 @@
+*{
+    position: relative;
+    box-sizing: border-box;
+    /* border: solid 1px; */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.product_box{
+    height: 500px;
+    margin-top: 10px;
+    background-color: #FDFCAD;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.basketball_product_icon{
+    width: 45px;
+    height: 45px;
+    transform: translateY(-30%);
+    float: left;
+}
+.soccer_product_icon{
+    width: 55px;
+    height: 50px;
+    transform: translateY(-25%);
+    float: left;
+}
+.volleyball_product_icon{
+    width: 55px;
+    height: 50px;
+    transform: translateY(-25%);
+    float: left;
+}
+.product_label h2{
+    margin: 0;
+    margin-top: 30px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.production{
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin-left: 30px;
+}
+.production p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.product_img{
+    width: 400px;
+    height: 400px;
+}
+.production .price{
+    font-size: 25px;
+    color: red;
+}
+.product_item{
+    display: inline-block;
+    height: 400px;
+    width: 400px;
+}
+h2 span{
+    color: red;
+    margin-left: 10px;
+}
+.form_select span{
+    font-size: 15px;
+    font-weight: bold;
+}
+.production_buttons{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.quick_button{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #93E5AB;
+    cursor: pointer;
+    border: 1px solid;
+}
+.quick_button:hover{
+    background-color: #65B891;
+    color:#EBF5EE;
+}
+.car_button{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #C2CAE8;
+    cursor: pointer;
+    border: 1px solid;
+}
+.car_button:hover{
+    background-color: #8380B6;
+    color:#EBF5EE;
+}
+.hidden{
+    display: none;
+}
+

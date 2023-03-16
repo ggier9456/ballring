@@ -1,0 +1,76 @@
+*{
+    position: relative;
+    box-sizing: border-box;
+    /* border: solid 1px; */
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.product_box{
+    height: 500px;
+    margin-top: 10px;
+}
+.basketball_product_icon{
+    width: 45px;
+    height: 45px;
+    transform: translateY(-30%);
+    float: left;
+}
+.soccer_product_icon{
+    width: 55px;
+    height: 50px;
+    transform: translateY(-25%);
+    float: left;
+}
+.volleyball_product_icon{
+    width: 55px;
+    height: 50px;
+    transform: translateY(-25%);
+    float: left;
+}
+.product_label h2{
+    margin: 0;
+    margin-top: 30px;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.production{
+    width: 250px;
+    height: 350px;
+    display: inline-block;
+    margin-left: 30px;
+}
+.production a{
+    text-decoration: none;
+}
+.production:hover{
+    border:solid 3px rgb(29, 192, 233);
+}
+.production:hover p{
+    color:rgb(29, 192, 233);
+}
+.production:hover .price{
+    color:red
+}
+.production p{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+}
+.product_img{
+    width: 250px;
+    height: 250px;
+}
+.production .price{
+    font-size: 25px;
+    color: red;
+}
+

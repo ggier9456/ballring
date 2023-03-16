@@ -1,0 +1,88 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+    /* border: solid 1px; */
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.menu{
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 0;
+    margin-left: 26%;
+    height: 100px;
+    z-index: 50;
+    /* background-color: red; */
+}
+.menu li{
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    float: left;
+    background-color: #FEFCAD;
+    width: 200px;
+    font-size: 30px;
+    border: solid 1px #EADDA6;
+}
+.list-1 a{
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    float: left;
+}
+.menu ul li:hover{
+    background-color: #E6E18F;
+}
+.list-2{
+    top:40px;
+    display: none;
+    /* display: block; */
+    position:absolute;
+    left: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.list-2 li{
+    font-size: 20px;
+    padding: 10px 0px;
+    text-align: center;
+}
+.list-2 a{
+    padding: 0;
+    text-decoration: none;
+}
+.list-1:hover .list-2{
+    display: block;
+}
+.list-2:hover{
+    display: block;
+}
+.basketball_icon{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    left: 10%;
+}
+.soccer_icon{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
+.volleyball_icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+}
