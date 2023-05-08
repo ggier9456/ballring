@@ -3,7 +3,7 @@ import pymongo
 from flask_sqlalchemy import SQLAlchemy
 import json
 #連線mongodb資料庫
-client = pymongo.MongoClient("mongodb+srv://root:root123@ballring.pa8gvrj.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://root:<password>@user.b7egcyy.mongodb.net/?retryWrites=true&w=majority")
 modb = client.website
 
 
@@ -29,7 +29,7 @@ class bb_products(mydb.Model):
 
     def __init__(self, bb_id, bb_size, bb_name, bb_price, bb_img, bb_link):
         self.bb_id = bb_id
-        self.bb_size = bb_size
+        self.bb_size = bb_size 
         self.bb_name = bb_name
         self.bb_price = bb_price
         self.bb_img = bb_img
@@ -591,3 +591,5 @@ def search():
     for k in search_items:
         print(k)
     return render_template("search.html", items= search_items, s_item= s_item)
+
+# app.run(port=3500, debug=True) #部屬在heroku不需要app.run, templates資料夾開頭不能大寫
