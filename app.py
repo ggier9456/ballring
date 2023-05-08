@@ -3,8 +3,8 @@ import pymongo
 from flask_sqlalchemy import SQLAlchemy
 import json
 #連線mongodb資料庫
-client = pymongo.MongoClient("mongodb+srv://root:root123@user.b7egcyy.mongodb.net/?retryWrites=true&w=majority")
-modb = client.website
+client = pymongo.MongoClient("mongodb+srv://root:root123@ballring.pa8gvrj.mongodb.net/?retryWrites=true&w=majority")
+modb = client.ballring
 
 
 app = Flask( __name__)
